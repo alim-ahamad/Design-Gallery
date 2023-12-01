@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <script src="https://kit.fontawesome.com/234f19571b.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="poco-style.css">
+
+</head>
+<body>
+    <!-- fixed navbar section started -->
+    <nav>
+
+        <div class="logo">
+            <img src="Images/logo.png" alt="logo">
+        </div>
+
+        <div class="search">
+            <input type="text" placeholder="Search...">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+
+        <div class="num">
+            <h6>Call And Order In: </h6>
+            <p>+91 9410069***</p>
+        </div>
+
+        <ul>
+            <li><a href="#"><i class="fa fa-user"></i></a></li>
+            <li><a href="#"><i class="fa fa-heart"></i></a></li>
+            <li><a href="#"><i class="fa fa-cart-shopping"></i></a></li>
+        </ul>
+
+    </nav>
+    <!-- fixed navbar section ended -->
+    <!-- 2nd navbar section started -->
+
+    <div class="nav-2">
+
+        <div class="opt">
+            <ul>
+                <li>
+                    <a href="#">Cakes</a>
+                </li>
+                <li>
+                    <a href="#">Flowers</a>
+                </li>
+                <li>
+                    <a href="#">combos</a>
+                </li>
+                <li>
+                    <a href="#">plants</a>
+                </li>
+                <li>
+                    <a href="#">birthday</a>
+                </li>
+                <li>
+                    <a href="#">aniversary</a>
+                </li>
+                <li>
+                    <a href="#">occasions</a>
+                </li>
+                <li>
+                    <a href="#">gifts</a>
+                </li>
+                <li>
+                    <a href="#">chocolates</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="book">
+            <p>Book <br> Now</p>
+        </div>
+    </div>
+
+    <!-- 2nd navbar section ended -->
+
+    <!-- banner section started -->
+
+    <div class="banner-container" id="banner-container">
+        <div class="banner" id="banner"></div>
+        <div class="nav-arrows">
+            <div class="arrow" onclick="changeBanner(-1)">&#10094;</div>
+            <div class="arrow" onclick="changeBanner(1)">&#10095;</div>
+        </div>
+    </div>
+
+    <script>
+        const banners = ['Images/banner1.png', 'Images/banner2.jpg', 'Images/banner3.png'];
+        let currentBanner = 0;
+
+        function changeBanner(offset) {
+            currentBanner = (currentBanner + offset) % banners.length;
+            if (currentBanner < 0) {
+                currentBanner = banners.length - 1;
+            }
+            document.getElementById('banner').style.backgroundImage = `url(${banners[currentBanner]})`;
+            updateBullets();
+        }
+
+        function autoChangeBanner() {
+            changeBanner(1); // Change banner after 5 seconds
+            setTimeout(autoChangeBanner, 5000);
+        }
+
+        autoChangeBanner(); // Start the banner rotation
+    </script>
+
+    <!-- banner section ended -->
+
+    <!-- basic item names section begins -->
+
+    <div class="basic-items-container">
+
+        <div class="items">
+            <img src="Images/basic-item1.webp" alt="Cakes">
+            <a href="#">Cakes</a>
+        </div>
+        <div class="items">
+            <img src="Images/basic-item2.webp" alt="Flowers">
+            <a href="#">Flowers</a>
+        </div>
+        <div class="items">
+            <img src="Images/basic-item3.webp" alt="Chocolates">
+            <a href="#">Chocolates</a>
+        </div>
+        <div class="items">
+            <img src="Images/basic-item4.webp" alt="Combos">
+            <a href="#">Combos</a>
+        </div>
+        <div class="items">
+            <img src="Images/basic-item5.webp" alt="Gifts">
+            <a href="#">Gifts</a>
+        </div>
+        <div class="items">
+            <img src="Images/basic-item6.webp" alt="Plants">
+            <a href="#">Plants</a>
+        </div>
+        
+    </div>
+
+    <!-- basic item names section ends -->
+
+    <!-- offer cards section begins -->
+
+    <div class="offers-card">
+        <div class="cards"><img src="Images/Offer-card1.jpg" alt="offer"></div>
+        <div class="cards"><img src="Images/Offer-card2.jpg" alt="offer"></div>
+        <div class="cards"><img src="Images/Offer-card3.jpg" alt="offer"></div>
+    </div>
+
+    <!-- offer cards section ends -->
+
+
+    <!-- Dishes section starts -->
+
+    <section class="dishes">
+
+        <h2>Popular Dishes</h2>
+
+        <div class="dis-nav">
+            <ul>
+                <li>
+                    <a href="#">Cakes</a>
+                </li>
+                <li>
+                    <a href="#">Flowers</a>
+                </li>
+                <li>
+                    <a href="#">combos</a>
+                </li>
+                <li>
+                    <a href="#">plants</a>
+                </li>
+                <li>
+                    <a href="#">birthday</a>
+                </li>
+                <li>
+                    <a href="#">aniversary</a>
+                </li>
+                <li>
+                    <a href="#">occasions</a>
+                </li>
+                <li>
+                    <a href="#">gifts</a>
+                </li>
+                <li>
+                    <a href="#">chocolates</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="products-container">
+
+            <div class="product">
+                <div class="offer">
+                    <h3>Sale!</h3>
+                    <i class="fa fa-heart"></i>
+                </div>
+                <img src="Images/product1.jpg">
+                <div class="p-content">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h4>Teddy Combo</h4>
+                    <p>Teddy Combo</p>
+                    <div class="rate">
+                        <h3>₹1,799.00 - ₹4,399.00</h3>
+                        <i class="fa fa-cart-shopping"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <div class="offer">
+                    <h3>Sale!</h3>
+                    <i class="fa fa-heart"></i>
+                </div>
+                <img src="Images/product2.webp">
+                <div class="p-content">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h4>Teddy Combo</h4>
+                    <p>Teddy Combo</p>
+                    <div class="rate">
+                        <h3>₹1,799.00 - ₹4,399.00</h3>
+                        <i class="fa fa-cart-shopping"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <div class="offer">
+                    <h3>Sale!</h3>
+                    <i class="fa fa-heart"></i>
+                </div>
+                <img src="Images/product3.webp">
+                <div class="p-content">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h4>Teddy Combo</h4>
+                    <p>Teddy Combo</p>
+                    <div class="rate">
+                        <h3>₹1,799.00 - ₹4,399.00</h3>
+                        <i class="fa fa-cart-shopping"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <div class="offer">
+                    <h3>Sale!</h3>
+                    <i class="fa fa-heart"></i>
+                </div>
+                <img src="Images/product4.webp">
+                <div class="p-content">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h4>Teddy Combo</h4>
+                    <p>Teddy Combo</p>
+                    <div class="rate">
+                        <h3>₹1,799.00 - ₹4,399.00</h3>
+                        <i class="fa fa-cart-shopping"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <div class="offer">
+                    <h3>Sale!</h3>
+                    <i class="fa fa-heart"></i>
+                </div>
+                <img src="Images/product5.jpg">
+                <div class="p-content">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h4>Teddy Combo</h4>
+                    <p>Teddy Combo</p>
+                    <div class="rate">
+                        <h3>₹1,799.00 - ₹4,399.00</h3>
+                        <i class="fa fa-cart-shopping"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <div class="offer">
+                    <h3>Sale!</h3>
+                    <i class="fa fa-heart"></i>
+                </div>
+                <img src="Images/product6.webp">
+                <div class="p-content">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h4>Teddy Combo</h4>
+                    <p>Teddy Combo</p>
+                    <div class="rate">
+                        <h3>₹1,799.00 - ₹4,399.00</h3>
+                        <i class="fa fa-cart-shopping"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <div class="offer">
+                    <h3>Sale!</h3>
+                    <i class="fa fa-heart"></i>
+                </div>
+                <img src="Images/product7.jpeg">
+                <div class="p-content">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h4>Teddy Combo</h4>
+                    <p>Teddy Combo</p>
+                    <div class="rate">
+                        <h3>₹1,799.00 - ₹4,399.00</h3>
+                        <i class="fa fa-cart-shopping"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <div class="offer">
+                    <h3>Sale!</h3>
+                    <i class="fa fa-heart"></i>
+                </div>
+                <img src="Images/product8.jpg">
+                <div class="p-content">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h4>Teddy Combo</h4>
+                    <p>Teddy Combo</p>
+                    <div class="rate">
+                        <h3>₹1,799.00 - ₹4,399.00</h3>
+                        <i class="fa fa-cart-shopping"></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <a href="#" class="all-products">All Products <i class="fa fa-arrow-right"></i></a>
+
+    </section>
+
+    <!-- Dishes section ends -->
+
+    <div class="offer-banners">
+        <div class="offer-banner">
+            <h4>Delicious Black</h4>
+            <h4>Forest Cake</h4>
+            <h4>₹999</h4>
+            <a href="#">Order Now</a>
+        </div>
+        <div class="offer-banner">
+            <h4>Delicious Black</h4>
+            <h4>Forest Cake</h4>
+            <h4>₹999</h4>
+            <a href="#">Order Now</a>
+        </div>
+        <div class="offer-banner">
+            <h4>Delicious Black</h4>
+            <h4>Forest Cake</h4>
+            <h4>₹999</h4>
+            <a href="#">Order Now</a>
+        </div>
+    </div>
+
+    <!-- top-products section starts -->
+
+    <section class="top-products">
+
+        <div class="all-products-head">
+            <h1>Top Products</h1>
+            <a href="#">All Products<i class="fa fa-arrow-right"></i></a>
+        </div>
+
+        <div class="top-products-container">
+
+            <div class="top-product">
+                <div class="img-holder">
+                    <div class="for-bg"></div>
+                    <img src="Images/product1.jpg">
+                </div>
+                <h4>Show Your Passion</h4>
+                <div class="rate">
+                    <h5>₹999.00</h5>
+                    <a href="#"><i class="fa fa-cart-shopping"></i></a>
+                </div>
+            </div>
+            <div class="top-product">
+                <div class="img-holder">
+                    <div class="for-bg"></div>
+                    <img src="Images/product1.jpg">
+                </div>
+                <h4>Show Your Passion</h4>
+                <div class="rate">
+                    <h5>₹999.00</h5>
+                    <a href="#"><i class="fa fa-cart-shopping"></i></a>
+                </div>
+            </div>
+            <div class="top-product">
+                <div class="img-holder">
+                    <div class="for-bg"></div>
+                    <img src="Images/product1.jpg">
+                </div>
+                <h4>Show Your Passion</h4>
+                <div class="rate">
+                    <h5>₹999.00</h5>
+                    <a href="#"><i class="fa fa-cart-shopping"></i></a>
+                </div>
+            </div>
+            <div class="top-product">
+                <div class="img-holder">
+                    <div class="for-bg"></div>
+                    <img src="Images/product1.jpg">
+                </div>
+                <h4>Show Your Passion</h4>
+                <div class="rate">
+                    <h5>₹999.00</h5>
+                    <a href="#"><i class="fa fa-cart-shopping"></i></a>
+                </div>
+            </div>
+            <div class="top-product">
+                <div class="img-holder">
+                    <div class="for-bg"></div>
+                    <img src="Images/product1.jpg">
+                </div>
+                <h4>Show Your Passion</h4>
+                <div class="rate">
+                    <h5>₹999.00</h5>
+                    <a href="#"><i class="fa fa-cart-shopping"></i></a>
+                </div>
+            </div>
+            
+        </div>
+
+    </section>
+
+    <!-- top-products section ends -->
+
+    <div class="bottom-banner">
+        <div class="content">
+                <div>
+                    <h2>Get Upto</h2>
+                    <h2>50%</h2>
+                    <h2>OFF</h2>
+                </div>
+                <div>
+                    <h2>Hot Fresh</h2>
+                    <h2>Hot Dog</h2>
+                    <a href="#">Order Now</a>
+                </div>
+        </div>
+    </div>
+
+    <!-- footer section begins -->
+
+    <section class="footer">
+
+        <div class="logo"><img src="Images/logo.png" alt="logo"></div>
+
+        <div class="container">
+
+            <div>
+                <h3>Address</h3>
+                <address>
+                    Lorem ipsum dolor sit amet  <br> adipisicing elit. Deleniti, vel!
+                </address>
+            </div>
+
+            <div>
+                <h3>Book A Table</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            </div>
+
+            <div>
+                <h3>opening hours</h3>
+                <p>
+                    Monday - Friday: <span>8am - 4pm</span><br>
+                    Saturday: <span>9am - 5pm</span>
+                </p>
+                <div class="links">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-youtube"></i></a>
+                    <a href="#"><i class="fa fa-wikipedia-w"></i></a>
+                </div>
+            </div>
+
+            <div>
+                <h3>newsletter</h3>
+                <p>Subscribe to the weekly newsletter for all
+                    the latest updates</p>
+                <div class="input">
+                    <input type="email" placeholder="example@gmail.com">
+                    <button type="submit">Submit</button>
+                </div>
+            </div>
+
+        </div>
+
+       
+
+    </section>
+
+    <div class="copyright">
+        <p>Copyright © 2023 All Rights Reserved.2</p>
+    </div>
+
+    <!-- footer section ended -->
+
+</body>
+</html>
